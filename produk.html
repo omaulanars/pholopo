@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk - Volvo Trucks & Buses</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <style>
+        /* --- GLOBAL STYLE (Sama dengan Index) --- */
+        :root {
+            --primary: #003057;
+            --primary-hover: #00203a;
+            --secondary: #6c757d;
+            --bg-light: #F8F9FA;
+            --text-dark: #121212;
+            --text-muted: #576b7c;
+            --shadow-soft: 0 4px 15px rgba(0, 48, 87, 0.08);
+            --shadow-hover: 0 15px 30px rgba(0, 48, 87, 0.15);
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        .fw-extra-bold {
+            font-weight: 800;
+        }
+
+        .text-primary-custom {
+            color: var(--primary);
+        }
+
+        .rounded-xl {
+            border-radius: 0.8rem;
+        }
+
+        /* --- NAVBAR --- */
+        .navbar-glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: var(--text-dark) !important;
+            margin: 0 0.5rem;
+            transition: color 0.2s;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary) !important;
+        }
+
+        .navbar-toggler {
+            border: none;
+            padding: 0;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        /* Mobile Navbar Fix */
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                background: white;
+                padding: 1.5rem;
+                border-radius: 0.5rem;
+                margin-top: 1rem;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-link {
+                border-bottom: 1px solid #eee;
+                padding: 10px 0;
+            }
+
+            .nav-link:last-child {
+                border-bottom: none;
+            }
+        }
+
+        /* --- PAGE HEADER --- */
+        .page-header {
+            background: linear-gradient(rgba(0, 48, 87, 0.9), rgba(0, 48, 87, 0.7)), url('img/2.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 160px 0 80px;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .breadcrumb {
+            justify-content: center;
+        }
+
+        .breadcrumb-item a {
+            color: #cfd8dc;
+            text-decoration: none;
+        }
+
+        .breadcrumb-item.active {
+            color: white;
+        }
+
+        /* --- TABS NAVIGATION (PERBAIKAN DISINI) --- */
+        .nav-pills .nav-link {
+            color: var(--primary);
+            font-weight: 700;
+            padding: 12px 30px;
+            border-radius: 50px;
+            background: white;
+            border: 1px solid #e9ecef;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-pills .nav-link.active {
+            background-color: var(--primary);
+            color: #ffffff !important;
+            /* Paksa warna putih saat aktif */
+            box-shadow: 0 4px 15px rgba(0, 48, 87, 0.3);
+        }
+
+        .nav-pills .nav-link.active i {
+            color: #ffffff !important;
+            /* Paksa icon putih juga */
+        }
+
+        .nav-pills .nav-link:hover:not(.active) {
+            background-color: #e9ecef;
+        }
+
+        /* --- PRODUCT CARDS --- */
+        .product-card {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .product-img-wrapper {
+            position: relative;
+            height: 240px;
+            overflow: hidden;
+            background-color: #f1f3f5;
+        }
+
+        .product-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-img-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--primary);
+            color: white;
+            padding: 5px 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .badge-electric {
+            background: #28a745;
+        }
+
+        .product-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-title {
+            font-weight: 800;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .product-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .btn-product {
+            width: 100%;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            font-weight: 700;
+            padding: 10px;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+
+        .btn-product:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #0b121b;
+            color: #cfd8dc;
+            padding-top: 80px;
+            padding-bottom: 40px;
+        }
+
+        footer h5 {
+            color: white;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+
+        footer ul {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        footer ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        footer ul li a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        footer ul li a:hover {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-glass">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="Volvo Logo" height="35">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMain">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="produk.html">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="promo.html">Promo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="karir.html">Karir</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="display-4">Armada Kami</h1>
+            <p class="lead text-white-50">Solusi transportasi tangguh untuk setiap kebutuhan bisnis Anda.</p>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mt-3">
+                    <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Produk</li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+    <section class="py-5 bg-white">
+        <div class="container">
+
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-6 text-center">
+                    <ul class="nav nav-pills justify-content-center" id="productTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="truk-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-truk" type="button" role="tab" aria-controls="pills-truk"
+                                aria-selected="true">
+                                <i class="bi bi-truck me-2"></i>Truk
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="bus-tab" data-bs-toggle="pill" data-bs-target="#pills-bus"
+                                type="button" role="tab" aria-controls="pills-bus" aria-selected="false">
+                                <i class="bi bi-bus-front me-2"></i>Bus
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tab-content" id="productTabContent">
+
+                <div class="tab-pane fade show active" id="pills-truk" role="tabpanel" aria-labelledby="truk-tab">
+                    <div class="row g-4 justify-content-center">
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <span class="product-badge">Long Haul</span>
+                                    <img src="img/fh.png" alt="Volvo FH16">
+                                </div>
+                                <div class="product-body">
+                                    <h3 class="product-title">Volvo FH16</h3>
+                                    <p class="product-desc">Truk paling bertenaga di kelasnya. Dirancang untuk muatan
+                                        terberat dan perjalanan jarak jauh dengan kenyamanan premium.</p>
+                                    <ul class="list-unstyled small text-muted mb-4">
+                                        <li><i class="bi bi-gear-fill me-2"></i>Hingga 750 HP</li>
+                                        <li><i class="bi bi-check-circle-fill me-2"></i>Kabin Globetrotter XL</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-product">Lihat Detail</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <span class="product-badge">Construction</span>
+                                    <img src="img/fmx.png" alt="Volvo FMX">
+                                </div>
+                                <div class="product-body">
+                                    <h3 class="product-title">Volvo FMX</h3>
+                                    <p class="product-desc">Truk konstruksi paling tangguh. Siap menghadapi medan
+                                        off-road terberat dengan struktur chassis yang diperkuat.</p>
+                                    <ul class="list-unstyled small text-muted mb-4">
+                                        <li><i class="bi bi-gear-fill me-2"></i>Ground Clearance Tinggi</li>
+                                        <li><i class="bi bi-check-circle-fill me-2"></i>Bumper Baja Heavy Duty</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-product">Lihat Detail</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <span class="product-badge">Versatile</span>
+                                    <img src="img/fm.png" alt="Volvo FM">
+                                </div>
+                                <div class="product-body">
+                                    <h3 class="product-title">Volvo FM</h3>
+                                    <p class="product-desc">Tempat kerja mobile yang fleksibel. Ideal untuk distribusi
+                                        regional dan perkotaan dengan visibilitas luar biasa.</p>
+                                    <ul class="list-unstyled small text-muted mb-4">
+                                        <li><i class="bi bi-gear-fill me-2"></i>Visibilitas Luas</li>
+                                        <li><i class="bi bi-check-circle-fill me-2"></i>Akses Masuk Mudah</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-product">Lihat Detail</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <span class="product-badge badge-electric"><i
+                                            class="bi bi-lightning-charge-fill"></i> Electric</span>
+                                    <img src="img/fmx-e.png" alt="Volvo FMX Electric">
+                                </div>
+                                <div class="product-body">
+                                    <h3 class="product-title">Volvo FMX Electric</h3>
+                                    <p class="product-desc">Ketangguhan FMX tanpa emisi. Solusi konstruksi ramah
+                                        lingkungan dengan keheningan mesin listrik.</p>
+                                    <ul class="list-unstyled small text-muted mb-4">
+                                        <li><i class="bi bi-battery-charging me-2"></i>Jarak Tempuh 300 km</li>
+                                        <li><i class="bi bi-volume-mute-fill me-2"></i>Operasi Hening</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-product">Lihat Detail</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <span class="product-badge badge-electric"><i
+                                            class="bi bi-lightning-charge-fill"></i> Electric</span>
+                                    <img src="img/fm-e.png" alt="Volvo FM Electric">
+                                </div>
+                                <div class="product-body">
+                                    <h3 class="product-title">Volvo FM Electric</h3>
+                                    <p class="product-desc">Distribusi perkotaan tanpa polusi suara dan udara.
+                                        Memungkinkan pengiriman malam hari di area perumahan.</p>
+                                    <ul class="list-unstyled small text-muted mb-4">
+                                        <li><i class="bi bi-battery-charging me-2"></i>Zero Emission</li>
+                                        <li><i class="bi bi-building me-2"></i>Aman untuk Zona Kota</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-product">Lihat Detail</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="pills-bus" role="tabpanel" aria-labelledby="bus-tab">
+                    <div class="row g-4 justify-content-center">
+
+                        <div class="col-md-6 col-lg-5">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <span class="product-badge">Coach</span>
+                                    <img src="img/b11r.png" alt="Volvo B11R">
+                                </div>
+                                <div class="product-body">
+                                    <h3 class="product-title">Volvo B11R</h3>
+                                    <p class="product-desc">Sasis premium untuk bus coach jarak jauh. Kombinasi sempurna
+                                        antara performa bahan bakar dan kenyamanan penumpang.</p>
+                                    <ul class="list-unstyled small text-muted mb-4">
+                                        <li><i class="bi bi-gear-fill me-2"></i>Mesin D11K (370-460 HP)</li>
+                                        <li><i class="bi bi-check-circle-fill me-2"></i>I-Shift Transmisi</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-product">Lihat Detail</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-5">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <span class="product-badge">Intercity</span>
+                                    <img src="img/b8r.png" alt="Volvo B8R">
+                                </div>
+                                <div class="product-body">
+                                    <h3 class="product-title">Volvo B8R</h3>
+                                    <p class="product-desc">Sasis serbaguna untuk lalu lintas antarkota dan pariwisata.
+                                        Efisiensi operasional tinggi dengan biaya perawatan rendah.</p>
+                                    <ul class="list-unstyled small text-muted mb-4">
+                                        <li><i class="bi bi-gear-fill me-2"></i>Mesin D8K (330 HP)</li>
+                                        <li><i class="bi bi-check-circle-fill me-2"></i>Stabil & Aman</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-product">Lihat Detail</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <img src="img/logo.png" alt="Volvo Logo" height="35" class="mb-4">
+                    <p class="text-secondary small">
+                        Solusi transportasi berkelanjutan untuk dunia yang terus berubah. Kami berkomitmen pada
+                        kualitas, keamanan, dan kepedulian lingkungan.
+                    </p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#"><i class="bi bi-youtube fs-5"></i></a>
+                        <a href="#"><i class="bi bi-linkedin fs-5"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5>Truk Kami</h5>
+                    <ul>
+                        <li><a href="#">Volvo FH16</a></li>
+                        <li><a href="#">Volvo FH</a></li>
+                        <li><a href="#">Volvo FM</a></li>
+                        <li><a href="#">Volvo FMX</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5>Layanan</h5>
+                    <ul>
+                        <li><a href="#">Volvo Connect</a></li>
+                        <li><a href="#">Service Planning</a></li>
+                        <li><a href="#">Financial Services</a></li>
+                        <li><a href="#">Driver Training</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5>Perusahaan</h5>
+                    <ul>
+                        <li><a href="#">Tentang Volvo</a></li>
+                        <li><a href="#">Karir</a></li>
+                        <li><a href="#">Berita & Media</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5>Kontak</h5>
+                    <ul class="small text-secondary">
+                        <li class="mb-2">Jakarta Head Office</li>
+                        <li class="mb-2">+62 21 1234 5678</li>
+                        <li>info.id@volvo.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row mt-5 pt-4 border-top border-secondary">
+                <div class="col text-center text-secondary small">
+                    &copy; 2024 Volvo Group. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
