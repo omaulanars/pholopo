@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promo & Penawaran Spesial Volvo Trucks Indonesia | Pholopo</title>
+
+    <meta name="description"
+        content="Dapatkan penawaran terbaik untuk truk dan bus Volvo. Diskon sparepart asli, paket servis Gold Contract, bunga ringan, dan promo trade-in terbaru bulan ini.">
+    <meta name="keywords"
+        content="Promo Volvo Trucks, Diskon Sparepart Truk, Paket Servis Volvo, Kredit Truk Bunga Rendah, Trade-in Truk, Volvo Service Contract">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://pholopo.vercel.app/promo.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pholopo.vercel.app/promo.html">
+    <meta property="og:title" content="Promo Spesial Volvo Trucks Indonesia">
+    <meta property="og:description"
+        content="Hemat biaya operasional dengan penawaran eksklusif kami. Hubungi kami untuk promo servis dan unit baru.">
+    <meta property="og:image" content="https://pholopo.vercel.app/img/2.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <meta name="theme-color" content="#003057">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SaleEvent",
+      "name": "Promo Spesial Volvo Trucks",
+      "description": "Berbagai penawaran menarik untuk servis, sparepart, dan pembelian unit.",
+      "organizer": {
+        "@type": "Organization",
+        "name": "Volvo Trucks Indonesia",
+        "url": "https://pholopo.vercel.app"
+      }
+    }
+    </script>
+
+    <style>
+        /* --- GLOBAL STYLE --- */
+        :root {
+            --primary: #003057;
+            --primary-hover: #00203a;
+            --secondary: #6c757d;
+            --accent-red: #dc3545;
+            --bg-light: #F8F9FA;
+            --text-dark: #121212;
+            --text-muted: #576b7c;
+            --shadow-soft: 0 4px 15px rgba(0, 48, 87, 0.08);
+            --shadow-hover: 0 15px 30px rgba(0, 48, 87, 0.15);
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        .text-primary-custom {
+            color: var(--primary);
+        }
+
+        .bg-primary-custom {
+            background-color: var(--primary);
+        }
+
+        .fw-extra-bold {
+            font-weight: 800;
+        }
+
+        .rounded-xl {
+            border-radius: 0.8rem;
+        }
+
+        /* --- NAVBAR --- */
+        .navbar-glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: var(--text-dark) !important;
+            margin: 0 0.5rem;
+            transition: color 0.2s;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary) !important;
+        }
+
+        .navbar-toggler {
+            border: none;
+            padding: 0;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        /* --- PAGE HEADER --- */
+        .page-header {
+            background: linear-gradient(to right, rgba(0, 48, 87, 0.9) 0%, rgba(220, 53, 69, 0.4) 100%), url('img/2.png');
+            background-size: cover;
+            background-position: center center;
+            color: white;
+            padding: 180px 0 100px;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .breadcrumb-item a {
+            color: #cfd8dc;
+            text-decoration: none;
+        }
+
+        .breadcrumb-item.active {
+            color: white;
+        }
+
+        /* --- CTA PROMO CARD --- */
+        .promo-cta-card {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .promo-cta-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: #cbd5e1;
+        }
+
+        /* Image Wrapper Side */
+        .promo-cta-img-wrapper {
+            height: 100%;
+            min-height: 250px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .promo-cta-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .promo-cta-card:hover .promo-cta-img-wrapper img {
+            transform: scale(1.05);
+        }
+
+        /* Badge Overlay on Image */
+        .promo-cta-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(220, 53, 69, 0.9);
+            color: white;
+            padding: 6px 14px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            backdrop-filter: blur(4px);
+        }
+
+        /* Content Side */
+        .promo-cta-body {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .promo-cta-date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 500;
+        }
+
+        .promo-cta-title {
+            font-weight: 800;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .promo-cta-desc {
+            font-size: 1rem;
+            color: #4b5563;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-wa-cta {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            font-weight: 700;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            text-decoration: none;
+        }
+
+        .btn-wa-cta:hover {
+            background-color: #20bd5a;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        }
+
+        /* Responsive Fix for Horizontal Card */
+        @media (max-width: 767.98px) {
+            .promo-cta-img-wrapper {
+                height: 200px;
+            }
+
+            .promo-cta-body {
+                padding: 1.5rem;
+            }
+
+            .promo-cta-title {
+                font-size: 1.25rem;
+            }
+        }
+
+        /* --- NEWSLETTER BOX --- */
+        .newsletter-box {
+            background: linear-gradient(135deg, #003057 0%, #001529 100%);
+            border-radius: 16px;
+            padding: 4rem 2rem;
+            color: white;
+            text-align: center;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #0b121b;
+            color: #cfd8dc;
+            padding-top: 80px;
+            padding-bottom: 40px;
+        }
+
+        footer h3 {
+            color: white;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+
+        footer ul {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        footer ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        footer ul li a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        footer ul li a:hover {
+            color: white;
+        }
+
+        /* --- FLOATING BUTTONS (WA & SCROLL TOP) --- */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1050;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .btn-wa-float {
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+            transition: transform 0.3s;
+            z-index: 2;
+            position: relative;
+        }
+
+        .btn-wa-float:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+
+        .btn-scroll-top {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            opacity: 0;
+            z-index: 1;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            pointer-events: none;
+        }
+
+        .btn-scroll-top:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .floating-container.show-scroll .btn-scroll-top {
+            bottom: 75px;
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                background: white;
+                padding: 1.5rem;
+                border-radius: 0.5rem;
+                margin-top: 1rem;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .page-header {
+                padding: 140px 0 60px;
+                text-align: center;
+            }
+
+            .floating-container {
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-glass">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" aria-label="Halaman Utama">
+                <img src="img/logo.png" alt="Volvo Trucks Logo" width="150" height="35" style="object-fit: contain;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMain">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="promo.html">Promo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="karir.html">Karir</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="display-3 fw-extra-bold mb-3">Penawaran Spesial</h1>
+            <p class="lead text-white-50">Maksimalkan keuntungan bisnis Anda dengan promo eksklusif dari Volvo Trucks.
+            </p>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center mt-3">
+                    <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Promo</li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+    <section class="py-5 bg-white">
+        <div class="container py-4">
+
+            <div class="row g-4">
+
+                <div class="col-lg-6">
+                    <div class="promo-cta-card h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-5">
+                                <div class="promo-cta-img-wrapper">
+                                    <span class="promo-cta-badge">Terpopuler</span>
+                                    <img src="https://placehold.co/600x800/003057/FFFFFF?text=Service+Contract"
+                                        alt="Promo Servis Volvo" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="promo-cta-body">
+                                    <div class="promo-cta-date"><i class="bi bi-clock"></i> Hingga 31 Des 2026</div>
+                                    <h3 class="promo-cta-title">Diskon 20% Gold Contract</h3>
+                                    <p class="promo-cta-desc">Kontrak servis Gold mencakup perawatan preventif dan
+                                        perbaikan dengan harga spesial.</p>
+                                    <a href="https://wa.me/62895639068080?text=Halo%20Volvo%20Trucks%2C%20saya%20tertarik%20dengan%20promo%20Diskon%2020%25%20Gold%20Contract%20ini."
+                                        class="btn-wa-cta" target="_blank">
+                                        <i class="bi bi-whatsapp"></i> Klaim Promo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="promo-cta-card h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-5">
+                                <div class="promo-cta-img-wrapper">
+                                    <span class="promo-cta-badge bg-secondary">Sparepart</span>
+                                    <img src="https://placehold.co/600x800/E9ECEF/003057?text=Genuine+Parts"
+                                        alt="Promo Sparepart Volvo" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="promo-cta-body">
+                                    <div class="promo-cta-date"><i class="bi bi-clock"></i> Stok Terbatas</div>
+                                    <h3 class="promo-cta-title">Paket Overhaul Hemat</h3>
+                                    <p class="promo-cta-desc">Diskon khusus untuk paket overhaul mesin D11 dan D13.
+                                        Gunakan suku cadang asli Volvo.</p>
+                                    <a href="https://wa.me/62895639068080?text=Halo%20Volvo%20Trucks%2C%20saya%20ingin%20info%20detail%20Paket%20Overhaul%20Hemat."
+                                        class="btn-wa-cta" target="_blank">
+                                        <i class="bi bi-whatsapp"></i> Cek Harga
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="promo-cta-card h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-5">
+                                <div class="promo-cta-img-wrapper">
+                                    <span class="promo-cta-badge bg-success">Hot Deal</span>
+                                    <img src="https://placehold.co/600x800/28a745/FFFFFF?text=Bunga+0%"
+                                        alt="Promo Kredit Truk" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="promo-cta-body">
+                                    <div class="promo-cta-date"><i class="bi bi-check-circle"></i> Khusus Unit FMX</div>
+                                    <h3 class="promo-cta-title">Bunga 0% Selama 1 Tahun</h3>
+                                    <p class="promo-cta-desc">Beli Volvo FMX sekarang dan nikmati bunga 0% untuk tenor 1
+                                        tahun pertama. Penawaran terbatas.</p>
+                                    <a href="https://wa.me/62895639068080?text=Halo%20Volvo%20Trucks%2C%20saya%20mau%20simulasi%20kredit%20FMX%20Bunga%200%25."
+                                        class="btn-wa-cta" target="_blank">
+                                        <i class="bi bi-whatsapp"></i> Simulasi Kredit
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="promo-cta-card h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-5">
+                                <div class="promo-cta-img-wrapper">
+                                    <span class="promo-cta-badge bg-dark">Program</span>
+                                    <img src="https://placehold.co/600x800/6c757d/FFFFFF?text=Trade-In"
+                                        alt="Program Tukar Tambah Truk" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="promo-cta-body">
+                                    <div class="promo-cta-date"><i class="bi bi-check-circle"></i> Selalu Ada</div>
+                                    <h3 class="promo-cta-title">Program Trade-in Unit Lama</h3>
+                                    <p class="promo-cta-desc">Tukar truk lama Anda (segala merek) dengan unit baru Volvo
+                                        FH16 atau FMX. Harga kompetitif.</p>
+                                    <a href="https://wa.me/62895639068080?text=Halo%20Volvo%20Trucks%2C%20saya%20mau%20tanya%20program%20Trade-in%20truk%20lama."
+                                        class="btn-wa-cta" target="_blank">
+                                        <i class="bi bi-whatsapp"></i> Hubungi Penilai
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="promo-cta-card h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-5">
+                                <div class="promo-cta-img-wrapper">
+                                    <span class="promo-cta-badge bg-info text-dark">Bonus</span>
+                                    <img src="https://placehold.co/600x800/17a2b8/FFFFFF?text=Training"
+                                        alt="Pelatihan Pengemudi Gratis" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="promo-cta-body">
+                                    <div class="promo-cta-date"><i class="bi bi-gift"></i> Gratis</div>
+                                    <h3 class="promo-cta-title">Gratis Driver Training</h3>
+                                    <p class="promo-cta-desc">Setiap pembelian 5 unit truk, dapatkan pelatihan
+                                        Eco-Driving gratis untuk 10 pengemudi Anda.</p>
+                                    <a href="https://wa.me/62895639068080?text=Halo%20Volvo%20Trucks%2C%20info%20lebih%20lanjut%20soal%20Gratis%20Driver%20Training."
+                                        class="btn-wa-cta" target="_blank">
+                                        <i class="bi bi-whatsapp"></i> Tanya Syarat
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="promo-cta-card h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-5">
+                                <div class="promo-cta-img-wrapper">
+                                    <span class="promo-cta-badge bg-warning text-dark">Digital</span>
+                                    <img src="https://placehold.co/600x800/fd7e14/FFFFFF?text=Volvo+Connect"
+                                        alt="Volvo Connect Free Trial" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="promo-cta-body">
+                                    <div class="promo-cta-date"><i class="bi bi-laptop"></i> Trial 6 Bulan</div>
+                                    <h3 class="promo-cta-title">Gratis Volvo Connect</h3>
+                                    <p class="promo-cta-desc">Coba sistem manajemen armada Volvo Connect secara gratis.
+                                        Pantau lokasi dan BBM real-time.</p>
+                                    <a href="https://wa.me/62895639068080?text=Halo%20Volvo%20Trucks%2C%20saya%20ingin%20daftar%20Trial%20Volvo%20Connect."
+                                        class="btn-wa-cta" target="_blank">
+                                        <i class="bi bi-whatsapp"></i> Daftar Trial
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="newsletter-box">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="fw-bold mb-3">Jangan Lewatkan Promo Terbaru</h2>
+                        <p class="lead mb-4 text-white-50">Daftarkan email Anda untuk menerima informasi update harga,
+                            stok unit, dan penawaran eksklusif setiap bulannya.</p>
+                        <form class="d-flex gap-2 justify-content-center flex-column flex-sm-row">
+                            <input type="email" class="form-control form-control-lg"
+                                placeholder="Masukkan alamat email Anda" style="max-width: 400px;">
+                            <button type="submit"
+                                class="btn btn-light btn-lg fw-bold text-primary-custom px-4">Berlangganan</button>
+                        </form>
+                        <p class="small mt-3 text-white-50">*Kami menghargai privasi Anda. Unsubscribe kapan saja.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="floating-container">
+        <button onclick="scrollToTop()" class="btn-scroll-top" aria-label="Scroll to Top">
+            <i class="bi bi-arrow-up"></i>
+        </button>
+
+        <a href="https://wa.me/62895639068080" class="btn-wa-float" target="_blank" aria-label="Chat WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <img src="img/logo.png" alt="Logo Footer Volvo" height="35" class="mb-4" loading="lazy">
+                    <p class="text-secondary small">
+                        Solusi transportasi berkelanjutan untuk dunia yang terus berubah. Kami berkomitmen pada
+                        kualitas, keamanan, dan kepedulian lingkungan.
+                    </p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" aria-label="Youtube"><i class="bi bi-youtube fs-5"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin fs-5"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h3>Truk Kami</h3>
+                    <ul>
+                        <li><a href="fh16.html">Volvo FH16</a></li>
+                        <li><a href="fmx.html">Volvo FMX</a></li>
+                        <li><a href="fm.html">Volvo FM</a></li>
+                        <li><a href="fmx-e.html">Volvo Electric</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h3>Layanan</h3>
+                    <ul>
+                        <li><a href="#">Volvo Connect</a></li>
+                        <li><a href="#">Service Planning</a></li>
+                        <li><a href="#">Financial Services</a></li>
+                        <li><a href="#">Driver Training</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h3>Perusahaan</h3>
+                    <ul>
+                        <li><a href="#">Tentang Volvo</a></li>
+                        <li><a href="#">Karir</a></li>
+                        <li><a href="#">Berita & Media</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h3>Kontak</h3>
+                    <ul class="small text-secondary">
+                        <li class="mb-2">Jakarta Head Office</li>
+                        <li class="mb-2">+62 21 1234 5678</li>
+                        <li>info.id@volvo.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row mt-5 pt-4 border-top border-secondary">
+                <div class="col text-center text-secondary small">
+                    &copy; 2024 Volvo Group. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Logic Floating Scroll Top
+        window.addEventListener('scroll', function () {
+            const floatContainer = document.querySelector('.floating-container');
+            if (window.scrollY > 300) {
+                floatContainer.classList.add('show-scroll');
+            } else {
+                floatContainer.classList.remove('show-scroll');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>
