@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Berita Terkini Volvo Trucks Indonesia | Pholopo</title>
+
+    <meta name="description"
+        content="Berita terbaru, tips perawatan truk, dan artikel teknologi otomotif dari Volvo Trucks Indonesia. Dapatkan wawasan industri transportasi di sini.">
+    <meta name="keywords"
+        content="Blog Truk, Tips Perawatan Volvo, Berita Otomotif, Teknologi Truk Listrik, Driver Tips, Volvo Trucks News">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://pholopo.vercel.app/blog.html">
+
+    <meta property="og:type" content="blog">
+    <meta property="og:url" content="https://pholopo.vercel.app/blog.html">
+    <meta property="og:title" content="Blog & Berita - Volvo Trucks Indonesia">
+    <meta property="og:description"
+        content="Temukan informasi terbaru seputar dunia logistik, tambang, dan teknologi truk.">
+    <meta property="og:image" content="https://pholopo.vercel.app/img/2.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <meta name="theme-color" content="#003057">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Volvo Trucks Indonesia Blog",
+      "description": "Artikel dan berita seputar industri truk heavy duty dan transportasi.",
+      "url": "https://pholopo.vercel.app/blog.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Volvo Trucks Indonesia",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://pholopo.vercel.app/img/logo.png"
+        }
+      }
+    }
+    </script>
+
+    <style>
+        /* --- GLOBAL STYLE --- */
+        :root {
+            --primary: #003057;
+            --primary-hover: #00203a;
+            --secondary: #6c757d;
+            --bg-light: #F8F9FA;
+            --text-dark: #121212;
+            --text-muted: #576b7c;
+            --shadow-soft: 0 4px 15px rgba(0, 48, 87, 0.08);
+            --shadow-hover: 0 15px 30px rgba(0, 48, 87, 0.15);
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        .text-primary-custom {
+            color: var(--primary);
+        }
+
+        .bg-primary-custom {
+            background-color: var(--primary);
+        }
+
+        .fw-extra-bold {
+            font-weight: 800;
+        }
+
+        .rounded-xl {
+            border-radius: 0.8rem;
+        }
+
+        /* --- NAVBAR --- */
+        .navbar-glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: var(--text-dark) !important;
+            margin: 0 0.5rem;
+            transition: color 0.2s;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary) !important;
+        }
+
+        .navbar-toggler {
+            border: none;
+            padding: 0;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        /* --- PAGE HEADER --- */
+        .page-header {
+            background: linear-gradient(to right, rgba(0, 48, 87, 0.9) 0%, rgba(0, 48, 87, 0.6) 100%), url('img/2.png');
+            background-size: cover;
+            background-position: center center;
+            color: white;
+            padding: 160px 0 80px;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .breadcrumb-item a {
+            color: #cfd8dc;
+            text-decoration: none;
+        }
+
+        .breadcrumb-item.active {
+            color: white;
+        }
+
+        /* --- SEARCH BAR --- */
+        .search-container {
+            margin-top: -30px;
+            z-index: 10;
+            position: relative;
+        }
+
+        .search-box {
+            background: white;
+            padding: 10px;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid #e9ecef;
+        }
+
+        .search-box input {
+            border: none;
+            flex-grow: 1;
+            padding: 10px 20px;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .search-box button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .search-box button:hover {
+            background: var(--primary-hover);
+        }
+
+        /* --- BLOG CARD --- */
+        .blog-card {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .blog-img {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .blog-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .blog-card:hover .blog-img img {
+            transform: scale(1.05);
+        }
+
+        .blog-category {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--primary);
+            color: white;
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .blog-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-title {
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .blog-title a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .blog-title a:hover {
+            color: var(--primary-hover);
+        }
+
+        .blog-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .btn-read {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .btn-read:hover {
+            gap: 10px;
+        }
+
+        /* --- PAGINATION (Text Only) --- */
+        .pagination .page-link {
+            color: var(--primary);
+            border: 1px solid #dee2e6;
+            margin: 0 5px;
+            border-radius: 50px;
+            padding: 8px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            text-decoration: none;
+            background-color: white;
+            transition: all 0.3s;
+        }
+
+        .pagination .page-link:hover {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .pagination .page-item.disabled .page-link {
+            color: #6c757d;
+            pointer-events: none;
+            background-color: #fff;
+            border-color: #dee2e6;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #0b121b;
+            color: #cfd8dc;
+            padding-top: 80px;
+            padding-bottom: 40px;
+        }
+
+        footer h3 {
+            color: white;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+
+        footer ul {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        footer ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        footer ul li a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        footer ul li a:hover {
+            color: white;
+        }
+
+        /* --- FLOATING BUTTONS (WA & SCROLL TOP) --- */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1050;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .btn-wa-float {
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+            transition: transform 0.3s;
+            z-index: 2;
+            position: relative;
+        }
+
+        .btn-wa-float:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+
+        .btn-scroll-top {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            opacity: 0;
+            z-index: 1;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            pointer-events: none;
+        }
+
+        .btn-scroll-top:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .floating-container.show-scroll .btn-scroll-top {
+            bottom: 75px;
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                background: white;
+                padding: 1.5rem;
+                border-radius: 0.5rem;
+                margin-top: 1rem;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .page-header {
+                padding: 140px 0 60px;
+                text-align: center;
+            }
+
+            .floating-container {
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-glass">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" aria-label="Halaman Utama">
+                <img src="img/logo.png" alt="Volvo Trucks Logo" width="150" height="35" style="object-fit: contain;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMain">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="promo.html">Promo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="karir.html">Karir</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="display-3 fw-extra-bold mb-3">Blog & Berita</h1>
+            <p class="lead text-white-50">Wawasan industri terbaru, tips perawatan, dan inovasi Volvo Trucks.</p>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center mt-3">
+                    <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container search-container">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Cari artikel (misal: Perawatan, Mesin)..."
+                onkeyup="filterBlog()">
+            <button aria-label="Cari"><i class="bi bi-search"></i></button>
+        </div>
+    </div>
+
+    <section class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="row g-4" id="blogGrid">
+
+                <div class="col-lg-4 col-md-6 blog-item">
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <span class="blog-category">Maintenance</span>
+                            <img src="https://placehold.co/600x400/003057/FFFFFF?text=Perawatan+Truk"
+                                alt="Tips Perawatan Truk" loading="lazy">
+                        </div>
+                        <div class="blog-body">
+                            <div class="blog-date">10 Jan 2026</div>
+                            <h3 class="blog-title"><a href="artikel1.html">5 Tips Merawat Truk Heavy Duty Agar Awet</a>
+                            </h3>
+                            <p class="blog-desc">Perawatan berkala adalah kunci umur panjang armada Anda. Simak panduan
+                                dasar perawatan harian.</p>
+                            <a href="artikel1.html" class="btn-read">Baca Selengkapnya <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 blog-item">
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <span class="blog-category">Product</span>
+                            <img src="https://placehold.co/600x400/2c3e50/FFFFFF?text=Volvo+FH16"
+                                alt="Review Volvo FH16" loading="lazy">
+                        </div>
+                        <div class="blog-body">
+                            <div class="blog-date">05 Jan 2026</div>
+                            <h3 class="blog-title"><a href="artikel2.html">Mengenal Volvo FH16: Raja Jalanan
+                                    Sesungguhnya</a></h3>
+                            <p class="blog-desc">Ulasan mendalam mengenai spesifikasi, performa mesin D16K, dan
+                                kenyamanan kabin Globetrotter.</p>
+                            <a href="artikel2.html" class="btn-read">Baca Selengkapnya <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 blog-item">
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <span class="blog-category badge-success" style="background-color: #28a745;">Electric</span>
+                            <img src="https://placehold.co/600x400/28a745/FFFFFF?text=Future+EV"
+                                alt="Truk Listrik Masa Depan" loading="lazy">
+                        </div>
+                        <div class="blog-body">
+                            <div class="blog-date">28 Des 2025</div>
+                            <h3 class="blog-title"><a href="artikel3.html">Masa Depan Logistik: Transisi ke Truk
+                                    Listrik</a></h3>
+                            <p class="blog-desc">Bagaimana Volvo Electric Trucks mengubah lanskap distribusi perkotaan
+                                dengan nol emisi.</p>
+                            <a href="artikel3.html" class="btn-read">Baca Selengkapnya <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 blog-item">
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <span class="blog-category">Efficiency</span>
+                            <img src="https://placehold.co/600x400/e67e22/FFFFFF?text=Fuel+Saving" alt="Hemat BBM"
+                                loading="lazy">
+                        </div>
+                        <div class="blog-body">
+                            <div class="blog-date">20 Des 2025</div>
+                            <h3 class="blog-title"><a href="artikel4.html">Teknik Mengemudi Eco-Driving untuk Hemat
+                                    BBM</a></h3>
+                            <p class="blog-desc">Cara pengemudi dapat mengurangi konsumsi bahan bakar hingga 10% dengan
+                                teknik sederhana.</p>
+                            <a href="artikel4.html" class="btn-read">Baca Selengkapnya <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 blog-item">
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <span class="blog-category">Safety</span>
+                            <img src="https://placehold.co/600x400/c0392b/FFFFFF?text=Safety+First"
+                                alt="Fitur Keselamatan" loading="lazy">
+                        </div>
+                        <div class="blog-body">
+                            <div class="blog-date">15 Des 2025</div>
+                            <h3 class="blog-title"><a href="artikel5.html">Fitur Keselamatan Canggih di Volvo Trucks</a>
+                            </h3>
+                            <p class="blog-desc">Mengenal VDS, Emergency Brake, dan Lane Keeping Support yang menjaga
+                                pengemudi tetap aman.</p>
+                            <a href="artikel5.html" class="btn-read">Baca Selengkapnya <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 blog-item">
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <span class="blog-category">Technology</span>
+                            <img src="https://placehold.co/600x400/8e44ad/FFFFFF?text=I-Shift" alt="Transmisi I-Shift"
+                                loading="lazy">
+                        </div>
+                        <div class="blog-body">
+                            <div class="blog-date">08 Des 2025</div>
+                            <h3 class="blog-title"><a href="artikel6.html">Keunggulan Transmisi Otomatis I-Shift</a>
+                            </h3>
+                            <p class="blog-desc">Mengapa I-Shift dianggap sebagai salah satu transmisi truk terbaik di
+                                dunia saat ini.</p>
+                            <a href="artikel6.html" class="btn-read">Baca Selengkapnya <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 blog-item">
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <span class="blog-category">Driver</span>
+                            <img src="https://placehold.co/600x400/7f8c8d/FFFFFF?text=Driving+Tips" alt="Tips Mengemudi"
+                                loading="lazy">
+                        </div>
+                        <div class="blog-body">
+                            <div class="blog-date">01 Des 2025</div>
+                            <h3 class="blog-title"><a href="artikel7.html">Tips Mengemudikan Truk di Jalan Licin</a>
+                            </h3>
+                            <p class="blog-desc">Panduan keselamatan berkendara saat musim hujan dan kondisi jalan
+                                off-road berlumpur.</p>
+                            <a href="artikel7.html" class="btn-read">Baca Selengkapnya <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 blog-item">
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <span class="blog-category">History</span>
+                            <img src="https://placehold.co/600x400/34495e/FFFFFF?text=Volvo+History" alt="Sejarah Volvo"
+                                loading="lazy">
+                        </div>
+                        <div class="blog-body">
+                            <div class="blog-date">25 Nov 2025</div>
+                            <h3 class="blog-title"><a href="artikel8.html">Sejarah Panjang Inovasi Volvo Trucks</a></h3>
+                            <p class="blog-desc">Perjalanan Volvo dari tahun 1928 hingga menjadi pemimpin pasar truk
+                                global saat ini.</p>
+                            <a href="artikel8.html" class="btn-read">Baca Selengkapnya <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 blog-item">
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <span class="blog-category">Service</span>
+                            <img src="https://placehold.co/600x400/16a085/FFFFFF?text=Training" alt="Training Pengemudi"
+                                loading="lazy">
+                        </div>
+                        <div class="blog-body">
+                            <div class="blog-date">18 Nov 2025</div>
+                            <h3 class="blog-title"><a href="artikel9.html">Pentingnya Training Pengemudi bagi Bisnis</a>
+                            </h3>
+                            <p class="blog-desc">Investasi pada skill pengemudi dapat mengurangi biaya maintenance dan
+                                bahan bakar signifikan.</p>
+                            <a href="artikel9.html" class="btn-read">Baca Selengkapnya <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Prev</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="floating-container">
+        <button onclick="scrollToTop()" class="btn-scroll-top" aria-label="Scroll to Top">
+            <i class="bi bi-arrow-up"></i>
+        </button>
+
+        <a href="https://wa.me/62895639068080" class="btn-wa-float" target="_blank" aria-label="Chat WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <img src="img/logo.png" alt="Logo Footer Volvo" height="35" class="mb-4" loading="lazy">
+                    <p class="text-secondary small">
+                        Solusi transportasi berkelanjutan untuk dunia yang terus berubah. Kami berkomitmen pada
+                        kualitas, keamanan, dan kepedulian lingkungan.
+                    </p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" aria-label="Youtube"><i class="bi bi-youtube fs-5"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin fs-5"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h3>Truk Kami</h3>
+                    <ul>
+                        <li><a href="fh16.html">Volvo FH16</a></li>
+                        <li><a href="fmx.html">Volvo FMX</a></li>
+                        <li><a href="fm.html">Volvo FM</a></li>
+                        <li><a href="fmx-e.html">Volvo Electric</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h3>Layanan</h3>
+                    <ul>
+                        <li><a href="layanan.html">Volvo Connect</a></li>
+                        <li><a href="layanan.html">Service Planning</a></li>
+                        <li><a href="layanan.html">Financial Services</a></li>
+                        <li><a href="layanan.html">Driver Training</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h3>Perusahaan</h3>
+                    <ul>
+                        <li><a href="#">Tentang Volvo</a></li>
+                        <li><a href="karir.html">Karir</a></li>
+                        <li><a href="#">Berita & Media</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h3>Kontak</h3>
+                    <ul class="small text-secondary">
+                        <li class="mb-2">Jakarta Head Office</li>
+                        <li class="mb-2">+62 21 1234 5678</li>
+                        <li>info.id@volvo.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row mt-5 pt-4 border-top border-secondary">
+                <div class="col text-center text-secondary small">
+                    &copy; 2024 Volvo Group. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // === LOGIKA SEARCH BAR ===
+        function filterBlog() {
+            let input = document.getElementById('searchInput');
+            let filter = input.value.toUpperCase();
+            let grid = document.getElementById('blogGrid');
+            let items = grid.getElementsByClassName('blog-item');
+
+            for (let i = 0; i < items.length; i++) {
+                let title = items[i].querySelector('.blog-title');
+                let txtValue = title.textContent || title.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    items[i].style.display = "";
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+        }
+
+        // === LOGIKA SCROLL TO TOP & FLOATING ===
+        window.addEventListener('scroll', function () {
+            const floatContainer = document.querySelector('.floating-container');
+            if (window.scrollY > 300) {
+                floatContainer.classList.add('show-scroll');
+            } else {
+                floatContainer.classList.remove('show-scroll');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>
